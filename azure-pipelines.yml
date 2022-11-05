@@ -1,4 +1,17 @@
 # Starter pipeline
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'Azure-ADO'
+    subscriptionId: 'c457de4d-6fd5-4fe7-941e-d1f6cdc54ef8'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'ARM'
+    location: 'East US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/Pratik-458/CICD/main/CreateWebApp/azuredeploy.json'
+    overrideParameters: '-projectName armparameters'
+    deploymentMode: 'Incremental'
+    deploymentName: 'DeployPipelineTemplate'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml

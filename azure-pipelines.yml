@@ -18,7 +18,7 @@ steps:
       location: 'East US'
       templateLocation: 'URL of the file'
       csmFileLink: 'https://raw.githubusercontent.com/Pratik-458/CICD/main/CreateWebApp/azuredeploy.json'
-      overrideParameters: '-projectName myarmpipeline'
+      overrideParameters: '-projectName myarmpipe'
       deploymentMode: 'Incremental'
       deploymentName: 'DeployPipelineTemplate'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
